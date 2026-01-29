@@ -15,8 +15,17 @@ brew install --cask mactools
 ```
 
 Or install directly:
+
 ```bash
 brew install --cask LishuGupta652/tap/mactools
+```
+
+## Reinstalling Without Quarantine
+
+If you need to reinstall the app without macOS Gatekeeper quarantine:
+
+```bash
+brew reinstall --cask --no-quarantine mactools
 ```
 
 ## Updating the Cask
@@ -24,25 +33,25 @@ brew install --cask LishuGupta652/tap/mactools
 When releasing a new version of the application:
 
 1. **Create a new GitHub release** with the updated `.zip` file
-
 2. **Calculate the new SHA256 hash:**
+
    ```bash
    shasum -a 256 MacTools-x.x.x.zip
    ```
-
 3. **Update the cask file** (`Casks/mactools.rb`):
+
    - Update the `version` number
    - Update the `sha256` hash
    - Ensure the `url` points to the correct release version
-
 4. **Commit and push the changes:**
+
    ```bash
    git add Casks/mactools.rb
    git commit -m "Update mactools to version x.x.x"
    git push origin main
    ```
-
 5. **Users can update their installation:**
+
    ```bash
    brew update
    brew upgrade --cask mactools
