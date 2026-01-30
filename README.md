@@ -18,6 +18,7 @@ Or install directly:
 
 ```bash
 brew install --cask LishuGupta652/tap/mactools
+brew install --cask LishuGupta652/tap/clipshield
 ```
 
 ## Reinstalling Without Quarantine
@@ -26,6 +27,7 @@ If you need to reinstall the app without macOS Gatekeeper quarantine:
 
 ```bash
 brew reinstall --cask --no-quarantine mactools
+brew install --cask --no-quarantine LishuGupta652/tap/clipshield
 ```
 
 ## Updating the Cask
@@ -60,3 +62,4 @@ When releasing a new version of the application:
 ## Available Casks
 
 - **mactools** - Personal macOS menu bar toolkit
+- **clipshield** - Clipboard guardian that redacts PII before you paste
